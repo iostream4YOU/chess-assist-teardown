@@ -1,0 +1,6 @@
+.DS_Store
+tools/node_modules/
+tools/build/
+tools/package-lock.json
+extension/
+deobfuscated/

@@ -1,0 +1,15 @@
+{
+  "name": "chess-assist-deob-tools",
+  "private": true,
+  "description": "Static (never-executing) deobfuscation pipeline used to produce ../deobfuscated/",
+  "scripts": {
+    "build": "bash build.sh"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.26.0",
+    "@babel/parser": "^7.26.0",
+    "@babel/traverse": "^7.26.0",
+    "@babel/types": "^7.26.0",
+    "prettier": "^3.3.0"
+  }
+}
