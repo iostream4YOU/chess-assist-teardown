@@ -1,5 +1,7 @@
 # Chess Assist Teardown
 
+[![ci](https://github.com/iostream4YOU/chess-assist-teardown/actions/workflows/ci.yml/badge.svg)](https://github.com/iostream4YOU/chess-assist-teardown/actions/workflows/ci.yml)
+
 **A reverse-engineering and security-analysis project by [@iostream4YOU](https://github.com/iostream4YOU).**
 
 I took a heavily obfuscated, closed-source Chrome extension that suggests (and auto-plays) chess moves on lichess.org, chess.com, chessarena.com and immortal.game. I wanted to find out exactly how it works.
