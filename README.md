@@ -90,12 +90,16 @@ flowchart LR
 
 ## Run it yourself
 
+You need Node.js 18 or later with npm, and an unmodified copy of Chess Assist v28.5 in `extension/` (it isn't redistributed here; see [Credits and licences](#credits-and-licences)).
+
 ```bash
-git clone https://github.com/iostream4YOU/chess-assist-analysis.git
-cd chess-assist-analysis/tools
+git clone https://github.com/iostream4YOU/chess-assist-teardown.git
+cd chess-assist-teardown/tools
 npm install
 bash build.sh        # needs ../extension/ (see below); writes ../deobfuscated/
 ```
+
+Every push and pull request runs [CI](.github/workflows/ci.yml) that installs the tools, syntax-checks `deob.js`, `readable.js` and `build.sh`, and validates the JSON maps.
 
 ## Project structure
 
