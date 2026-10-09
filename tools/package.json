@@ -6,7 +6,7 @@
     "build": "bash build.sh"
   },
   "dependencies": {
-    "@babel/generator": "^7.26.0",
+    "@babel/generator": "^8.0.6",
     "@babel/parser": "^7.26.0",
     "@babel/traverse": "^7.26.0",
     "@babel/types": "^7.26.0",
