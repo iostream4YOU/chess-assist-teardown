@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  tools:
+    name: Check deobfuscation tools
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Syntax-check the pipeline scripts
+        run: |
+          node --check deob.js
+          node --check readable.js
+          bash -n build.sh
+      - name: Validate rename and annotation maps
+        run: |
+          for f in maps/*.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f', 'utf8'))" && echo "ok $f"
+          done
